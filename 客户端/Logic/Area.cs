@@ -9,6 +9,8 @@
 
     public class Area
     {
+
+		public int aaaa;
         private string addr;
         public List<string> m_AllAddr = new List<string>();
 
