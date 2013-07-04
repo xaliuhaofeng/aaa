@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB6A5891-639A-4793-B9F1-4AD9E9097B02}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Logic</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\MAX_CMSS_V2\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="GlobalParams.cs" />
+    <Compile Include="HistoryData.cs" />
+    <Compile Include="InstallationSite.cs" />
+    <Compile Include="KaiGuanLiangBaoJing.cs" />
+    <Compile Include="KaiGuanLiangLeiXing.cs" />
+    <Compile Include="KaiGuanLiangList.cs" />
+    <Compile Include="KaiGuanLiangValue.cs" />
+    <Compile Include="KeyWordList.cs" />
+    <Compile Include="KeyWords.cs" />
+    <Compile Include="KongZhiLiang.cs" />
+    <Compile Include="KongZhiLiangCeDian.cs" />
+    <Compile Include="KongZhiLiangList.cs" />
+    <Compile Include="KuiDianGuanXi.cs" />
+    <Compile Include="KuiDianGuanXiClass.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LogicCommon.cs" />
+    <Compile Include="LogType.cs" />
+    <Compile Include="max_cmssDataSet.cs">
+      <DependentUpon>max_cmssDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="max_cmssDataSet.Designer.cs">
+      <DependentUpon>max_cmssDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measure.cs" />
+    <Compile Include="MoNiLiangBaoJing.cs" />
+    <Compile Include="MoNiLiangLeiXing.cs" />
+    <Compile Include="MoNiLiangLeiXingList.cs" />
+    <Compile Include="MoNiLiangState.cs" />
+    <Compile Include="MoNiLiangValue.cs" />
+    <Compile Include="MoNiTuFiles.cs" />
+    <Compile Include="OperateDB.cs" />
+    <Compile Include="OperateDBAccess.cs" />
+    <Compile Include="ReportConfig.cs" />
+    <Compile Include="ReportDataSuply.cs" />
+    <Compile Include="ReportType.cs" />
+    <Compile Include="TiaoJiao.cs" />
+    <Compile Include="TongDao.cs" />
+    <Compile Include="TongDaoLeiXing.cs" />
+    <Compile Include="UDPComm.cs" />
+    <Compile Include="UserLevel.cs" />
+    <Compile Include="Users.cs" />
+    <Compile Include="UserType.cs" />
+    <Compile Include="voiceAlarm.cs" />
+    <Compile Include="XianXingZhi.cs" />
+    <Compile Include="XianXingZhiList.cs" />
+    <Compile Include="YuJing.cs" />
+    <Compile Include="ZhuangTaiTuData.cs" />
+    <Compile Include="ZhuangTaiTuValue.cs" />
+    <Compile Include="ZhuZhuangTuCoordinatesValue.cs" />
+    <Compile Include="ZhuZhuangTuData.cs" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MAX_CMSS_V2\dll\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Compile Include="Area.cs" />
+    <Compile Include="CeDian.cs" />
+    <Compile Include="CedianAlarm.cs" />
+    <Compile Include="CeDianList.cs" />
+    <Compile Include="ClientConfig.cs" />
+    <Compile Include="ComData.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="DualAlarmInfo.cs" />
+    <Compile Include="DuanDianGuanXi.cs" />
+    <Compile Include="DuanDianGuanXiClass.cs" />
+    <Compile Include="DuoSheBei.cs" />
+    <Compile Include="FenZhan.cs" />
+    <Compile Include="FenZhanLeiXing.cs" />
+    <Compile Include="FenZhanRTdata.cs" />
+    <Compile Include="frmScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logic.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="max_cmssDataSet.xsc">
+      <DependentUpon>max_cmssDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="max_cmssDataSet.xsd" />
+    <None Include="max_cmssDataSet.xss">
+      <DependentUpon>max_cmssDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+</Project>

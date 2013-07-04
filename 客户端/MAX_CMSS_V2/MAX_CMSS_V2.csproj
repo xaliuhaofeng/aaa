@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4CF50A8-02DA-4E4E-8C03-07D00DAE14A4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>MAX_CMSS_V2</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MAX_CMSS_V2.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>image\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>54FE00663738BF556DC0C3C874B462F0A8DF231B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MAX_CMSS_V2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>dll\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="netchartdir_cp">
+      <HintPath>dll\netchartdir_cp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="IrisSkin2">
+      <HintPath>dll\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Interop.SpeechLib">
+      <HintPath>dll\Interop.SpeechLib.dll</HintPath>
+    </Reference>
+    <Compile Include="Curve\Alarm_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\Alarm_curve.Designer.cs">
+      <DependentUpon>Alarm_curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\Call_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\Call_curve.Designer.cs">
+      <DependentUpon>Call_curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\CurveData.cs" />
+    <Compile Include="Curve\Cut_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\Cut_curve.Designer.cs">
+      <DependentUpon>Cut_curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\Feed_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\Feed_curve.Designer.cs">
+      <DependentUpon>Feed_curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\Form_curve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curve\Form_curve.Designer.cs">
+      <DependentUpon>Form_curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\Form_switch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curve\Form_switch.Designer.cs">
+      <DependentUpon>Form_switch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\ImageCapture.cs" />
+    <Compile Include="Curve\Multi_Curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\Multi_Curve.Designer.cs">
+      <DependentUpon>Multi_Curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\PrintCurve.cs" />
+    <Compile Include="Curve\RealTimeCurveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Curve\RealTimeCurveForm.Designer.cs">
+      <DependentUpon>RealTimeCurveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\RealTime_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\RealTime_curve.Designer.cs">
+      <DependentUpon>RealTime_curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\UC_Curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\UC_Curve.Designer.cs">
+      <DependentUpon>UC_Curve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\UC_KglChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\UC_KglChart.Designer.cs">
+      <DependentUpon>UC_KglChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\UC_KglZttChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\UC_KglZttChart.Designer.cs">
+      <DependentUpon>UC_KglZttChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\UC_KglZttChart1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\UC_KglZttChart1.Designer.cs">
+      <DependentUpon>UC_KglZttChart1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\ZhuangTaiTu_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\ZhuangTaiTu_Form.Designer.cs">
+      <DependentUpon>ZhuangTaiTu_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Curve\ZhuZhuangTu_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Curve\ZhuZhuangTu_Form.Designer.cs">
+      <DependentUpon>ZhuZhuangTu_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockContentEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockContentEx2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_parameter_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_parameter_config.designer.cs">
+      <DependentUpon>Form_parameter_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FzhPort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FzhPort.Designer.cs">
+      <DependentUpon>FzhPort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Multi_alarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <DependentUpon>Report.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report.designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="voiceAlarmPro.cs" />
+    <Compile Include="Turn_management.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="System_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_TiaoJiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_Abstract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_ATongJiZhi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal_analog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_system.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_measure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config_Print.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintAbstract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintATongJi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CeDianSelectorListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_commu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateTimeChooser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Select_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Query_DState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_cut_switch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_YueBaoBiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_DBaoJing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_ATongJiZhi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_AKuiDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_ADuanDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_ABaoJing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Keywords_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_alarm_dual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control_feed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config_substation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintDState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_DKuiDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Operation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_mimic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dual_hot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_cut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config_Prealarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config_area.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintADuanDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CeDianSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_Alarm_Frame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestpointPicture_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Substation_type.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Substation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List_cut_analog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LineCoordinatesValue.cs" />
+    <Compile Include="Comm_ChuanKou.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemInit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Switch_status.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_DKuiDianYiChang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_AKuiDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_ADuanDian2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Form_substation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_qurey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PreAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LieBiaoKuang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="List_All_Alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comm_FengDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CeDianSelectorListBox2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_YueBaoBiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_ABaoJing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_DState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_feed_switch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List_Datagrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_alarm_switch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Add_Control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Switch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_OperatorLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_DBaoJing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_A.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="List_adjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_page_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormRef.cs" />
+    <Compile Include="CustomProfessionalRenderer.cs" />
+    <Compile Include="Config_color.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintYueBaoBiao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintSheBeiGuZhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintDKuiDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changSkin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="voiceAlarmUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_SystemRunLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintAKuiDian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APIFunctions.cs" />
+    <Compile Include="List_alarm_analog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accumulation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Query_SheBeiGuZhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modify_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linear_manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FenZhanConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Logout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryMultiAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_SheBeiGuZhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SwitchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List_feed_analog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatesValue.cs" />
+    <Compile Include="RealTime_curve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColSelect2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="voice\voiceAlarmClass.cs" />
+    <Compile Include="Device_error.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FenZhanZhuanTai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintDBaoJing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConfigPrintABaoJing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Delete_Reason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Curve\chartdir.lic" />
+    <None Include="image\Thumbs.db" />
+    <None Include="MAX_CMSS_V2_TemporaryKey.pfx" />
+    <None Include="Properties\.svn\entries" />
+    <None Include="Properties\.svn\text-base\AssemblyInfo.cs.svn-base" />
+    <None Include="Properties\.svn\text-base\Resources.Designer.cs.svn-base" />
+    <None Include="Properties\.svn\text-base\Resources.resx.svn-base" />
+    <None Include="Properties\.svn\text-base\Settings.Designer.cs.svn-base" />
+    <None Include="Properties\.svn\text-base\Settings.settings.svn-base" />
+    <None Include="Properties\DataSources\.svn\entries" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report.xsc">
+      <DependentUpon>Report.xsd</DependentUpon>
+    </None>
+    <None Include="Report.xsd" />
+    <None Include="Report.xss">
+      <DependentUpon>Report.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comm_ChuanKou.resx">
+      <DependentUpon>Comm_ChuanKou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_area.resx">
+      <DependentUpon>Config_area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_color.resx">
+      <DependentUpon>Config_color.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config_Prealarm.resx">
+      <DependentUpon>Config_Prealarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_cut.resx">
+      <DependentUpon>Control_cut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_feed.resx">
+      <DependentUpon>Control_feed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Alarm_curve.resx">
+      <DependentUpon>Alarm_curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Call_curve.resx">
+      <DependentUpon>Call_curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Cut_curve.resx">
+      <DependentUpon>Cut_curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Feed_curve.resx">
+      <DependentUpon>Feed_curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Form_curve.resx">
+      <DependentUpon>Form_curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Form_switch.resx">
+      <DependentUpon>Form_switch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\Multi_Curve.resx">
+      <DependentUpon>Multi_Curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\RealTimeCurveForm.resx">
+      <DependentUpon>RealTimeCurveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\RealTime_curve.resx">
+      <DependentUpon>RealTime_curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\UC_Curve.resx">
+      <DependentUpon>UC_Curve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\UC_KglChart.resx">
+      <DependentUpon>UC_KglChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\UC_KglZttChart.resx">
+      <DependentUpon>UC_KglZttChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\UC_KglZttChart1.resx">
+      <DependentUpon>UC_KglZttChart1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\ZhuangTaiTu_Form.resx">
+      <DependentUpon>ZhuangTaiTu_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Curve\ZhuZhuangTu_Form.resx">
+      <DependentUpon>ZhuZhuangTu_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateTimeChooser.resx">
+      <DependentUpon>DateTimeChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Device_error.resx">
+      <DependentUpon>Device_error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FenZhanZhuanTai.resx">
+      <DependentUpon>FenZhanZhuanTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_control.resx">
+      <DependentUpon>Form_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_list.resx">
+      <DependentUpon>Form_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_mimic.resx">
+      <DependentUpon>Form_mimic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_page_edit.resx">
+      <DependentUpon>Form_page_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_parameter_config.resx">
+      <DependentUpon>Form_parameter_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PreAlarm.resx">
+      <DependentUpon>Form_PreAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_qurey.resx">
+      <DependentUpon>Form_qurey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_substation.resx">
+      <DependentUpon>Form_substation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FzhPort.resx">
+      <DependentUpon>FzhPort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Linear_manage.resx">
+      <DependentUpon>Linear_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List_alarm_dual.resx">
+      <DependentUpon>List_alarm_dual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List_Alarm_Frame.resx">
+      <DependentUpon>List_Alarm_Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List_All_Alarm.resx">
+      <DependentUpon>List_All_Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modify_test.resx">
+      <DependentUpon>Modify_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multi_alarm.resx">
+      <DependentUpon>Multi_alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal_analog.resx">
+      <DependentUpon>Normal_analog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation.resx">
+      <DependentUpon>Operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryPanel.resx">
+      <DependentUpon>QueryPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query_SystemRunLog.resx">
+      <DependentUpon>Query_SystemRunLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Switch.resx">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Switch_status.resx">
+      <DependentUpon>Switch_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPoint.resx">
+      <DependentUpon>TestPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turn_management.resx">
+      <DependentUpon>Turn_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_manage.resx">
+      <DependentUpon>User_manage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="Properties\.svn\prop-base\" />
+    <Folder Include="Properties\.svn\props\" />
+    <Folder Include="Properties\.svn\tmp\prop-base\" />
+    <Folder Include="Properties\.svn\tmp\props\" />
+    <Folder Include="Properties\.svn\tmp\text-base\" />
+    <Folder Include="Properties\DataSources\.svn\prop-base\" />
+    <Folder Include="Properties\DataSources\.svn\props\" />
+    <Folder Include="Properties\DataSources\.svn\text-base\" />
+    <Folder Include="Properties\DataSources\.svn\tmp\prop-base\" />
+    <Folder Include="Properties\DataSources\.svn\tmp\props\" />
+    <Folder Include="Properties\DataSources\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.ico" />
+    <Content Include="alarm.ico" />
+    <Content Include="analog.ico" />
+    <Content Include="com.ico" />
+    <Content Include="control.ico" />
+    <Content Include="Curve\netchartdir_cp.dll" />
+    <Content Include="Curve\netchartdir_cp.xml" />
+    <Content Include="exit.ico" />
+    <Content Include="head.jpg" />
+    <Content Include="help.ico" />
+    <Content Include="image\about.ico" />
+    <Content Include="image\alarm.ico" />
+    <Content Include="image\analog.ico" />
+    <Content Include="image\com.ico" />
+    <Content Include="image\control.ico" />
+    <Content Include="image\exit.ico" />
+    <Content Include="image\head.jpg" />
+    <Content Include="image\help.ico" />
+    <Content Include="image\list.ico" />
+    <Content Include="image\logo.ico" />
+    <Content Include="image\new.ico" />
+    <Content Include="image\sound_low.png" />
+    <Content Include="image\switch.ico" />
+    <Content Include="image\test.ico" />
+    <Content Include="image\warning.ico" />
+    <Content Include="image\图标.ico" />
+    <Content Include="list.ico" />
+    <Content Include="logo.ico" />
+    <Content Include="new.ico" />
+    <Content Include="sound_low.png" />
+    <Content Include="switch.ico" />
+    <Content Include="test.ico" />
+    <Content Include="warning.ico" />
+    <Content Include="图标.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{FB6A5891-639A-4793-B9F1-4AD9E9097B02}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPictureBox\MyPictureBox.csproj">
+      <Project>{BCD4D9B8-1CA2-4024-8F78-B53CED7DEBBC}</Project>
+      <Name>MyPictureBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+</Project>

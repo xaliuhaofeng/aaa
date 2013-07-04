@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCD4D9B8-1CA2-4024-8F78-B53CED7DEBBC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>MyPictureBox</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="TransPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransLittlePicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YeKuang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FullPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RealTimeCurveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RealTimeCoordinatesValue.cs" />
+    <Compile Include="ALittlePicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AWordTuYuan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EditMoNiTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZhuangTaiTu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlMoveResize.cs" />
+    <Compile Include="ZhuangTaiValue.cs" />
+    <EmbeddedResource Include="ALittlePicture.resx">
+      <DependentUpon>ALittlePicture.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{FB6A5891-639A-4793-B9F1-4AD9E9097B02}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
