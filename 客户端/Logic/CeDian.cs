@@ -18,7 +18,9 @@
       
 
 
-        //  0----模拟量  1----开关量(包括分站量）   2----控制量
+
+
+        //  0----模拟量  1----开关量(包括分站量）   2----控制量   3
 
         private int daLeiXing;
         private DateTime deleteDate;
